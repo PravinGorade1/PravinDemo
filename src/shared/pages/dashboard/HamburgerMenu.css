@@ -1,0 +1,203 @@
+/* Base Container */
+.hamburger-menu-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: #1e2a52; /* Solid primary color */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Animations */
+.slide-in-left {
+  animation: slideInLeft 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.float-anim {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.hover-rotate {
+  transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(90deg);
+}
+
+/* Main Card (Sidebar) */
+.hamburger-menu-card {
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background: #23315e; /* Solid slightly lighter blue */
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+/* Top Icon */
+.hamburger-menu-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.hamburger-menu-icon {
+  font-size: 24px;
+  color: #ffd700;
+  cursor: pointer;
+}
+
+/* Profile Section */
+.hamburger-menu-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.hamburger-menu-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffd700;
+  background: #fff;
+}
+
+.hamburger-menu-profile h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hamburger-menu-profile p {
+  margin: 0;
+  font-size: 13px;
+  color: #2bb3b1;
+  font-weight: 600;
+}
+
+/* Divider */
+.hamburger-menu-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0 20px;
+}
+
+/* Menu Items */
+.hamburger-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.hamburger-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu-item span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu-item-icon {
+  font-size: 20px;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+/* Normal Hover */
+.hamburger-menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Active State */
+.hamburger-menu-item.active {
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
+  color: #1e2a52;
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.hamburger-menu-item.active .menu-item-icon {
+  color: #1e2a52;
+}
+
+/* Developer Bottom Card */
+.hamburger-menu-developer {
+  background: #1e2a52;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto; /* Pushes it to the bottom */
+  margin-bottom: 20px;
+}
+
+.interactive-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interactive-card:active {
+  transform: scale(0.96);
+}
+
+.hamburger-menu-dev-avatar {
+  width: 45px;
+  height: 45px;
+  background: #2bb3b1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev-icon {
+  font-size: 22px;
+  color: #fff;
+}
+
+.hamburger-menu-dev-text h4 {
+  margin: 0 0 3px;
+  font-size: 14px;
+  color: #ffd700;
+}
+
+.hamburger-menu-dev-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #cbd5e1;
+}

@@ -1,0 +1,90 @@
+
+/* Main Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f4f6f9;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Content Section */
+.dashboard-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dashboard-subtitle {
+  font-size: 14px;
+  color: #777;
+}
+
+
+.dashboard-bottom-nav {
+  position: fixed;
+  bottom: -2px;
+  left: 0px;
+  right: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 12px 10px;
+  /* border-radius: 18px; */
+
+  background: rgba(27, 60, 83, 0.35);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+/* Nav Item */
+.dashboard-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+/* Active + Hover */
+.dashboard-nav-item:hover {
+  color: #ffd700;
+  transform: translateY(-3px);
+}
+
+/* Active Tab */
+.dashboard-nav-item.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffd700;
+}
+
+/* Icon */
+.dashboard-icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* Hover Effect */
+.dashboard-nav-item:hover {
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* Active Style (optional) */
+.dashboard-nav-item.active {
+  color: #ffd700;
+}

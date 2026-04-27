@@ -1,0 +1,89 @@
+.solid-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.solid-review-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s;
+}
+
+.solid-review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.solid-quote-icon {
+  font-size: 28px;
+  color: #f1f5f9;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 0;
+}
+
+.solid-review-text {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.solid-review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+}
+
+.solid-reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.solid-reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #1e2a52, #2bb3b1);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.solid-reviewer-name {
+  margin: 0 0 2px;
+  font-size: 15px;
+  color: #1e2a52;
+  font-weight: 700;
+}
+
+.solid-reviewer-location {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.solid-review-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.solid-star {
+  color: #fbbf24;
+  font-size: 14px;
+}

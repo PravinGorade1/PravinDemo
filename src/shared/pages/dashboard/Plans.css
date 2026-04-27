@@ -1,0 +1,134 @@
+/* Re-using some solid variables from Achievement */
+
+.solid-plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.solid-plan-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s;
+}
+
+.solid-plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.solid-plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+.solid-plan-logo {
+  height: 25px;
+  /* Darken the logo since background is white */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.solid-plan-type {
+  font-size: 11px;
+  background: #e0f2fe;
+  color: #0284c7;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.solid-plan-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e2a52;
+  margin: 0 0 15px;
+}
+
+.solid-plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.solid-plan-features li {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.solid-feature-icon {
+  color: #10b981; /* Green */
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.solid-plan-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.solid-plan-age {
+  display: flex;
+  flex-direction: column;
+}
+
+.solid-plan-age span {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.solid-plan-age strong {
+  font-size: 14px;
+  color: #1e2a52;
+}
+
+.solid-plan-btn {
+  background: linear-gradient(135deg, #1e2a52, #2bb3b1);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(43, 179, 177, 0.3);
+}
+
+.solid-plan-btn:active {
+  transform: scale(0.95);
+}
+
+/* Animations */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
