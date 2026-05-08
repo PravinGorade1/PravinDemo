@@ -5,6 +5,8 @@ import Dashboard from "./Dashboard";
 import whatsapp from "../../../assets/gif/whats-app.gif";
 import location from "../../../assets/gif/location1.gif";
 import bgImage from "../../../assets/svg/Cad.jpg";
+import emailjs from "@emailjs/browser";
+
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -29,7 +31,7 @@ function Contact() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
-    if (!formData.message.trim()) newErrors.message = "Message cannot be empty";
+    // if (!formData.message.trim()) newErrors.message = "Message cannot be empty";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -42,26 +44,44 @@ function Contact() {
     }
   };
 
-  const handleConfirm = () => {
-    setShowPopup(false);
-    setIsSuccess(true);
-    // In a real app, you would submit to backend here.
-    setTimeout(() => {
-      setIsSuccess(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 4000);
+  const handleConfirm = async () => {
+    try {
+      await emailjs.send(
+        "service_68n0dwn",
+        "template_7p6hnvt",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "qMPx7yu5SOjAou5ql"
+      );
+
+      setShowPopup(false);
+      setIsSuccess(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+
+    } catch (error) {
+      console.log("Error:", error);
+      alert("Failed to send message");
+    }
   };
 
   return (
     <div className="dashboard-contact-container" style={{ backgroundImage: `url(${bgImage})` }}>
-      
+
       {/* Dynamic Background Elements */}
       <div className="contact-bg-glow"></div>
-      
+
       {/* Header */}
       <div className="dashboard-contact-header">
         <div className="contact-header-icon-wrapper">
-           <FaEnvelopeOpenText className="contact-header-envelope float-anim" />
+          <FaEnvelopeOpenText className="contact-header-envelope float-anim" />
         </div>
         <h2>Get In Touch</h2>
         <p>We're here to help you secure your future. Send us a message today! ✨</p>
@@ -74,6 +94,10 @@ function Contact() {
             <FaCheckCircle className="success-icon" />
             <h3>Message Sent!</h3>
             <p>Thank you, {formData.name}. We will get back to you shortly.</p>
+
+            <button className="dashboard-contact-btn-ok" onClick={() => setIsSuccess(false)}>
+              Ok
+            </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="contact-form">
@@ -121,7 +145,7 @@ function Contact() {
 
       {/* Info Section */}
       {/* <div className="dashboard-contact-info">
-        
+
         <div className="dashboard-contact-card glass-panel">
           <div className="dashboard-contact-icon">
             <FaRunning />
@@ -131,7 +155,7 @@ function Contact() {
           <p className="highlight-text">17+ Years Experience</p>
         </div>
 
-        
+
         <div
           className="dashboard-contact-card glass-panel interactive-card"
           onClick={() => window.open("https://wa.me/918805384935", "_blank")}
@@ -144,7 +168,7 @@ function Contact() {
           <p className="highlight-text">Tap to WhatsApp</p>
         </div>
 
-        
+
         <div
           className="dashboard-contact-card glass-panel interactive-card"
           onClick={() =>
@@ -159,9 +183,9 @@ function Contact() {
           <p className="highlight-text">Sambhajinagar</p>
         </div>
       </div> */}
-      
-    
-      <div style={{height: "80px"}}></div>
+
+
+      <div style={{ height: "80px" }}></div>
 
       <Dashboard />
 
@@ -171,7 +195,7 @@ function Contact() {
           <div className="popup-modal pop-in glass-panel-heavy">
             <div className="popup-header">
               <div className="popup-warning-icon-bg">
-                 <FaExclamationTriangle className="popup-warning-icon" />
+                <FaExclamationTriangle className="popup-warning-icon" />
               </div>
               <h3>Confirm Details</h3>
             </div>

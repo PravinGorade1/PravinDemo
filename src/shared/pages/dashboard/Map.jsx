@@ -8,7 +8,7 @@ function Map() {
 
       <iframe
         className="dashboard-map-frame"
-        src="https://www.google.com/maps?q=tembhurni,solapur,Maharashtra&z=15&output=embed"
+        src="https://www.google.com/maps?q=nillod,aurangabad,Maharashtra&z=15&output=embed"
         title="Nillod Location"
         loading="lazy"
       ></iframe>

@@ -124,21 +124,21 @@
 }
 
 .aurora-orb-1 {
-  background: rgba(25, 24, 20, 0.4); 
+  background: rgba(25, 24, 20, 0.4);
   width: 250px; height: 250px;
   top: -50px; left: -50px;
   animation: auroraOrbit1 12s infinite alternate ease-in-out;
 }
 
 .aurora-orb-2 {
-  background: rgba(19, 19, 19, 0.5); 
+  background: rgba(19, 19, 19, 0.5);
   width: 200px; height: 200px;
   bottom: -50px; right: -50px;
   animation: auroraOrbit2 15s infinite alternate ease-in-out;
 }
 
 .aurora-orb-3 {
-  background: rgba(20, 18, 18, 0.3); 
+  background: rgba(20, 18, 18, 0.3);
   width: 150px; height: 150px;
   top: 40%; left: 30%;
   animation: auroraOrbit3 10s infinite alternate ease-in-out;
@@ -785,7 +785,7 @@ border-radius: 20px;
   padding-bottom: 20px;
   padding-top: 10px;
   /* Hide scrollbar for cleaner look */
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
 .plans-slider::-webkit-scrollbar {
   display: none;
@@ -936,7 +936,7 @@ border-radius: 20px;
 }
 
 /* =========================================
-   ANIMATIONS 
+   ANIMATIONS
    ========================================= */
 
 @keyframes fadeInUp {

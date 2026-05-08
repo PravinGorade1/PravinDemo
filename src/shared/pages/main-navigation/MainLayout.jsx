@@ -11,6 +11,7 @@ import Achievement from "../dashboard/Achievement";
 import Plans from "../dashboard/Plans";
 import Testimonials from "../dashboard/Testimonials";
 import Developer from "../dashboard/Developer";
+import WhatsApp from "../whatsApp/WhatsApp";
 
 const Main_Layout = () => {
   return (
@@ -29,6 +30,8 @@ const Main_Layout = () => {
         <Route path="/insurance/dashboard/plans" element={<Plans />} />
         <Route path="/insurance/dashboard/testimonials" element={<Testimonials />} />
         <Route path="/insurance/dashboard/developer" element={<Developer />} />
+        <Route path="/insurance/dashboard/whatsapp" element={<WhatsApp />} />
+
       </Routes>
     </Suspense>
   );
